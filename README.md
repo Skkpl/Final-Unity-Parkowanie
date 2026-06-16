@@ -2,12 +2,19 @@
 
 Projekt: deterministyczny algorytm automatycznego parkowania bez machine learningu.
 
-## Autor
+## Metryczka zespolu
 
-Imie i nazwisko: wpisz swoje dane  
-Numer albumu: wpisz numer albumu  
-Data: 2026-06-15  
-Udzial: 100% - projekt indywidualny
+Projekt: Automatyczne parkowanie w Unity 3D  
+Repozytorium: https://github.com/Skkpl/Final-Unity-Parkowanie.git  
+Data przygotowania dokumentacji: 2026-06-16  
+
+| Osoba | Nr albumu | Udzial | Zakres odpowiedzialnosci |
+| --- | ---: | ---: | --- |
+| Szymon Karamon | 91859 | 40% | Integracja projektu w Unity, generator scen, konfiguracja repozytorium GitHub, testy koncowe, dokumentacja oddania. |
+| Bartosz Stolarczyk | 91742 | 30% | Logika automatu FSM, sensory Raycast/CheckBox, HUD debug, testy wykrywania miejsc parkingowych. |
+| Antoni Krakowiak | 88437 | 30% | Przygotowanie ukladu map, trajektorie manewrow parkowania, ruch przeszkody dynamicznej, korekty wizualne pojazdow. |
+
+Oswiadczenie o zakresie prac: powyzszy podzial opisuje deklarowany wklad osob w przygotowanie projektu, dokumentacji i scen demonstracyjnych. Kod sterowania, sceny i dokumentacja stanowia wspolny rezultat zespolu.
 
 ## Co zawiera projekt
 
@@ -27,6 +34,14 @@ Udzial: 100% - projekt indywidualny
 - UI do przechodzenia miedzy mapami, w tym zapasowe przyciski `OnGUI`.
 - HUD debug pokazujacy stan FSM, predkosc i odczyty czujnikow.
 - Folder `Documentation` z pelnym opisem technicznym, instrukcja stworzenia projektu od zera, testami i sciaga do obrony.
+
+## Zgodnosc z wymaganiami oddania
+
+- Repozytorium zawiera kod zrodlowy, dokumentacje i plik `.gitignore` przygotowany pod Unity.
+- Historia Git zawiera commit poczatkowy oraz kolejne commity porzadkujace dokumentacje i metryczke projektu.
+- Projekt nie korzysta z ML-Agents ani z gotowego modelu `.onnx`; logika jest napisana jako deterministyczny FSM.
+- Dokumentacja zawiera opis decyzji projektowych, diagram FSM, instrukcje uruchomienia, test plan i znane ograniczenia.
+- Film z demonstracja oraz build `.exe` nalezy przygotowac osobno po otwarciu projektu w Unity.
 
 ## Dokumentacja
 

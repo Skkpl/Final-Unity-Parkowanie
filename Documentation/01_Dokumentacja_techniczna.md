@@ -1,8 +1,21 @@
 # Dokumentacja techniczna projektu
 
 Projekt: Automatyczne parkowanie w Unity 3D  
-Wersja dokumentacji: 2026-06-15  
+Wersja dokumentacji: 2026-06-16  
 Charakter projektu: deterministyczna symulacja parkowania, bez machine learningu
+
+## 0. Metryczka projektu
+
+Repozytorium GitHub: https://github.com/Skkpl/Final-Unity-Parkowanie.git  
+Charakter oddania: projekt zespolowy  
+
+| Osoba | Nr albumu | Udzial | Zakres odpowiedzialnosci |
+| --- | ---: | ---: | --- |
+| Szymon Karamon | 91859 | 40% | Integracja projektu w Unity, generator scen, konfiguracja repozytorium GitHub, testy koncowe, dokumentacja oddania. |
+| Bartosz Stolarczyk | 91742 | 30% | Logika automatu FSM, sensory Raycast/CheckBox, HUD debug, testy wykrywania miejsc parkingowych. |
+| Antoni Krakowiak | 88437 | 30% | Przygotowanie ukladu map, trajektorie manewrow parkowania, ruch przeszkody dynamicznej, korekty wizualne pojazdow. |
+
+Oswiadczenie o zakresie prac: powyzszy podzial opisuje deklarowany wklad osob w przygotowanie projektu, dokumentacji i scen demonstracyjnych. Kod sterowania, sceny i dokumentacja stanowia wspolny rezultat zespolu.
 
 ## 1. Cel projektu
 

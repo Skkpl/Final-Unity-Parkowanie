@@ -1,5 +1,13 @@
 # Finalne kroki w Unity
 
+Repozytorium GitHub: https://github.com/Skkpl/Final-Unity-Parkowanie.git
+
+## Metryczka do oddania
+
+- Szymon Karamon, 91859, 40% - integracja Unity, sceny, repozytorium GitHub, testy koncowe.
+- Bartosz Stolarczyk, 91742, 30% - FSM, sensory, walidacja miejsc, HUD debug.
+- Antoni Krakowiak, 88437, 30% - uklady map, trajektorie, przeszkoda dynamiczna, wyglad pojazdow.
+
 1. Zamknij Unity.
 2. Uruchom `Install-ToUnityProject.ps1` z tej paczki albo recznie skopiuj:
    - `Assets/Scripts` do `Automatic parking/Assets/Scripts`

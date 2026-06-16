@@ -2,6 +2,14 @@
 
 Ten dokument jest krotka sciaga do rozmowy z prowadzacym.
 
+## Metryczka zespolu
+
+| Osoba | Nr albumu | Udzial | Skrot zadan |
+| --- | ---: | ---: | --- |
+| Szymon Karamon | 91859 | 40% | Integracja Unity, sceny, repozytorium GitHub, testy koncowe. |
+| Bartosz Stolarczyk | 91742 | 30% | FSM, sensory, walidacja miejsc, HUD debug. |
+| Antoni Krakowiak | 88437 | 30% | Uklady map, trajektorie parkowania, przeszkoda dynamiczna, wyglad pojazdow. |
+
 ## 1. Jednozdaniowy opis projektu
 
 Projekt przedstawia deterministyczna symulacje automatycznego parkowania w Unity, w ktorej auto wykrywa miejsce parkingowe sensorami Raycast, przechodzi przez maszyne stanow FSM i wykonuje zaprogramowany manewr parkowania.
@@ -138,4 +146,3 @@ Mozna powiedziec:
 ## 12. Krotki opis do sprawozdania
 
 Projekt przedstawia symulacje automatycznego parkowania samochodu w Unity 3D. System opiera sie na maszynie stanow FSM oraz czujnikach wirtualnych wykonanych za pomoca `Physics.Raycast`. Czujniki mierza odleglosci od przeszkod z przodu, z tylu oraz po bokach pojazdu. Po wykryciu poprawnego miejsca parkingowego auto przechodzi przez kolejne stany manewru: ustawienie, skret, kontre, prostowanie i zatrzymanie. W scenie dynamicznej czerwony pojazd nadjezdzajacy z naprzeciwka wymusza zatrzymanie awaryjne. Dla stabilnosci demonstracji finalny manewr parkowania jest realizowany po wyznaczonych punktach trajektorii, co zapewnia powtarzalny wynik i ulatwia prezentacje algorytmu.
-

@@ -2,6 +2,18 @@
 
 Projekt: Automatyczne parkowanie w Unity 3D
 
+Data aktualizacji: 2026-06-16
+
+## Metryczka
+
+| Osoba | Nr albumu | Udzial |
+| --- | ---: | ---: |
+| Szymon Karamon | 91859 | 40% |
+| Bartosz Stolarczyk | 91742 | 30% |
+| Antoni Krakowiak | 88437 | 30% |
+
+Pelny podzial zadan znajduje sie w `CONTRIBUTORS.md` oraz w `01_Dokumentacja_techniczna.md`.
+
 ## Pliki dokumentacji
 
 1. `01_Dokumentacja_techniczna.md`
@@ -51,4 +63,3 @@ Jesli masz malo czasu:
 2. Przeczytaj sekcje o FSM w `01_Dokumentacja_techniczna.md`.
 3. Przeczytaj test mapy 3 w `03_Testy_i_uruchomienie.md`.
 4. Zapamietaj, ze finalny manewr dziala deterministycznie "po szynach", a sensory i FSM sluza do pokazania logiki automatycznego parkowania.
-
