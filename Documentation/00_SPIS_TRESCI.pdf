@@ -1,0 +1,165 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1374 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(00_SPIS_TRESCI) Tj
+T*
+() Tj
+T*
+(Spis tresci dokumentacji) Tj
+T*
+() Tj
+T*
+(Projekt: Automatyczne parkowanie w Unity 3D) Tj
+T*
+() Tj
+T*
+(Pliki dokumentacji) Tj
+T*
+() Tj
+T*
+(1. 01_Dokumentacja_techniczna.md) Tj
+T*
+(- pelny opis techniczny projektu,) Tj
+T*
+(- architektura,) Tj
+T*
+(- klasy,) Tj
+T*
+(- FSM,) Tj
+T*
+(- sensory,) Tj
+T*
+(- scenariusze,) Tj
+T*
+(- generator scen,) Tj
+T*
+(- ograniczenia.) Tj
+T*
+() Tj
+T*
+(2. 02_Jak_stworzyc_od_zera.md) Tj
+T*
+(- instrukcja stworzenia podobnego projektu krok po kroku,) Tj
+T*
+(- konfiguracja Unity,) Tj
+T*
+(- tworzenie auta,) Tj
+T*
+(- tworzenie sensorow,) Tj
+T*
+(- tworzenie FSM,) Tj
+T*
+(- tworzenie map,) Tj
+T*
+(- strojenie punktow parkowania.) Tj
+T*
+() Tj
+T*
+(3. 03_Testy_i_uruchomienie.md) Tj
+T*
+(- instalacja,) Tj
+T*
+(- uruchomienie,) Tj
+T*
+(- testy map 1, 2 i 3,) Tj
+T*
+(- kryteria zaliczenia,) Tj
+T*
+(- typowe problemy.) Tj
+T*
+() Tj
+T*
+(4. 04_Opis_do_obrony.md) Tj
+T*
+(- krotka sciaga do rozmowy z prowadzacym,) Tj
+T*
+(- odpowiedzi na pytania,) Tj
+T*
+(- opis map,) Tj
+T*
+(- opis uproszczen.) Tj
+T*
+() Tj
+T*
+(5. 05_Mapa_plikow_i_parametrow.md) Tj
+T*
+(- gdzie w kodzie zmienic predkosc,) Tj
+T*
+(- gdzie zmienic sensory,) Tj
+T*
+(- gdzie zmienic tor parkowania,) Tj
+T*
+(- gdzie zmienic czerwone auto,) Tj
+T*
+(- gdzie zmienic UI i HUD.) Tj
+T*
+() Tj
+T*
+(Najwazniejsze do przeczytania przed obrona) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 7 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 422 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+() Tj
+T*
+(Jesli masz malo czasu:) Tj
+T*
+() Tj
+T*
+(1. Przeczytaj 04_Opis_do_obrony.md.) Tj
+T*
+(2. Przeczytaj sekcje o FSM w 01_Dokumentacja_techniczna.md.) Tj
+T*
+(3. Przeczytaj test mapy 3 w 03_Testy_i_uruchomienie.md.) Tj
+T*
+(4. Zapamietaj, ze finalny manewr dziala deterministycznie "po szynach", a sensory i FSM) Tj
+T*
+(sluza do pokazania logiki automatycznego parkowania.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 8
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000001673 00000 n 
+0000001799 00000 n 
+0000002272 00000 n 
+trailer
+<< /Size 8 /Root 1 0 R >>
+startxref
+2342
+%%EOF

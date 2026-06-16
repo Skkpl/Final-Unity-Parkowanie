@@ -1,0 +1,328 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2418 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(README Automatyczne parkowanie) Tj
+T*
+() Tj
+T*
+(Automatyczne parkowanie w Unity 3D) Tj
+T*
+() Tj
+T*
+(Projekt: deterministyczny algorytm automatycznego parkowania bez machine learningu.) Tj
+T*
+() Tj
+T*
+(Autor) Tj
+T*
+() Tj
+T*
+(Imie i nazwisko: wpisz swoje dane) Tj
+T*
+(Numer albumu: wpisz numer albumu) Tj
+T*
+(Data: 2026-06-15) Tj
+T*
+(Udzial: 100% - projekt indywidualny) Tj
+T*
+() Tj
+T*
+(Co zawiera projekt) Tj
+T*
+() Tj
+T*
+(- Prosty model auta sterowany kinematycznie.) Tj
+T*
+(- Proste modele aut z nadwoziem, kabina i kolami zamiast pojedynczych kostek.) Tj
+T*
+(- Wizualna fizyka kol: kola obracaja sie podczas jazdy, a przednie kola skrecaja zgodnie z) Tj
+T*
+(kierunkiem manewru.) Tj
+T*
+(- Czujniki wirtualne oparte o Physics.Raycast oraz walidacje wolnej przestrzeni przez) Tj
+T*
+(Physics.CheckBox.) Tj
+T*
+(- Punkty trajektorii ParkingScenario, dzieki ktorym manewr jest powtarzalny na kazdej mapie.) Tj
+T*
+(- Tryb demonstracyjny "po szynach": po wykryciu miejsca auto jedzie po wczesniej) Tj
+T*
+(wyznaczonych punktach, z ograniczona zmiana kata miedzy punktami.) Tj
+T*
+(- Maszyne stanow FSM:) Tj
+T*
+(Scan -> ValidateSpot -> Positioning -> ReverseTurn -> CounterTurn -> Straighten -> Parked.) Tj
+T*
+(- Stan awaryjny EmergencyStop, ktory zatrzymuje auto przy przeszkodzie przed lub za) Tj
+T*
+(pojazdem.) Tj
+T*
+(- Trzy sceny testowe:) Tj
+T*
+(- Map_01_Perpendicular - parking prostopadly z falszywa luka.) Tj
+T*
+(- Map_02_Parallel - waska ulica i parkowanie rownolegle.) Tj
+T*
+(- Map_03_Dynamic - uklad jak mapa 1, ale miejsca sa po lewej stronie; auto z naprzeciwka) Tj
+T*
+(wymusza zatrzymanie.) Tj
+T*
+(- UI do przechodzenia miedzy mapami, w tym zapasowe przyciski OnGUI.) Tj
+T*
+(- HUD debug pokazujacy stan FSM, predkosc i odczyty czujnikow.) Tj
+T*
+(- Folder Documentation z pelnym opisem technicznym, instrukcja stworzenia projektu od zera,) Tj
+T*
+(testami i sciaga do obrony.) Tj
+T*
+() Tj
+T*
+(Dokumentacja) Tj
+T*
+() Tj
+T*
+(W folderze Documentation sa osobne pliki:) Tj
+T*
+() Tj
+T*
+(1. 01_Dokumentacja_techniczna.md - dokladny opis architektury, klas, FSM, sensorow, map i) Tj
+T*
+(generatora scen.) Tj
+T*
+(2. 02_Jak_stworzyc_od_zera.md - instrukcja jak zbudowac podobny projekt samodzielnie w) Tj
+T*
+(Unity.) Tj
+T*
+(3. 03_Testy_i_uruchomienie.md - test plan, kryteria zaliczenia i typowe problemy.) Tj
+T*
+(4. 04_Opis_do_obrony.md - krotka sciaga do odpowiedzi przed prowadzacym.) Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2803 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(5. 05_Mapa_plikow_i_parametrow.md - gdzie w kodzie zmieniac predkosci, sensory, tory) Tj
+T*
+(parkowania i UI.) Tj
+T*
+() Tj
+T*
+(Diagram FSM) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+([blok kodu / diagram w pliku Markdown]) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Decyzje projektowe) Tj
+T*
+() Tj
+T*
+(Algorytm demonstracyjny nie korzysta z machine learningu. Auto jedzie wzdluz pasa, pokazuje) Tj
+T*
+(odczyty czujnikow bocznych i po dojechaniu do zaakceptowanej luki przechodzi do kolejnych) Tj
+T*
+(stanow FSM. Dla niezawodnosci prezentacji manewr parkowania jest wykonywany po punktach) Tj
+T*
+(trajektorii wygenerowanych w scenie.) Tj
+T*
+() Tj
+T*
+(Na mapie 1 wszystkie miejsca sa zajete poza dwoma: pierwsza wolna luka jest za waska przez) Tj
+T*
+(zle ustawione sasiednie pojazdy, a druga wolna luka jest miejscem docelowym. Auto przejezdza) Tj
+T*
+(obok za waskiej luki i parkuje dopiero w miejscu docelowym. Na mapie 2 luka ma wiekszy zapas) Tj
+T*
+(z przodu, zeby manewr rownolegly nie zahaczal o auto przed miejscem. Na mapie 3 miejsca) Tj
+T*
+(parkingowe sa po lewej stronie jak w mapie 1. Czerwone auto jedzie z naprzeciwka, niebieskie) Tj
+T*
+(czeka, az przejedzie, potem dojezdza do lewej krawedzi drogi i gladko cofa w miejsce.) Tj
+T*
+() Tj
+T*
+(Sterowanie autem jest uproszczonym modelem kinematycznym. Po znalezieniu miejsca projekt) Tj
+T*
+(celowo przechodzi w tryb "po szynach", zeby pokaz byl stabilny i powtarzalny:) Tj
+T*
+() Tj
+T*
+(- predkosc zmienia sie plynnie przez przyspieszenie i hamowanie,) Tj
+T*
+(- skret jest ograniczony do 35 stopni,) Tj
+T*
+(- kat skretu zmienia sie w czasie, a nie natychmiastowo,) Tj
+T*
+(- obrot pojazdu jest wyliczany z uproszczonego modelu rowerowego.) Tj
+T*
+(- w trybie demonstracyjnym po wykryciu miejsca auto sledzi sztywne odcinki trajektorii) Tj
+T*
+(podzielone na male kroki,) Tj
+T*
+(- orientacja nadwozia jest liczona tylko po osi pionowej Y i interpolowana miedzy kolejnymi) Tj
+T*
+(punktami najkrotsza droga, dlatego nie moze wykonac obrotu 360 stopni,) Tj
+T*
+(- etap konczy sie po przejechaniu calego odcinka szyny, bez dokrecania pojazdu w miejscu.) Tj
+T*
+() Tj
+T*
+(Uwagi o fizyce) Tj
+T*
+() Tj
+T*
+(Sprawdzono oficjalne WheelCollider Unity. To dobre narzedzie do pojazdow, ale wymaga) Tj
+T*
+(strojenia zawieszenia, tarcia, masy i kolizji pod konkretna scene. W projekcie zostal) Tj
+T*
+(zastosowany stabilny model kinematyczny inspirowany kinematic bicycle / path tracking. Dla) Tj
+T*
+(niezawodnosci zaliczeniowej finalny manewr parkowania dziala jak pojazd jadacy po) Tj
+T*
+(wyznaczonej szynie: kola wizualnie skrecaja i obracaja sie, ale tor jest deterministyczny i) Tj
+T*
+(nie korzysta z losowej dynamiki Rigidbody.) Tj
+T*
+() Tj
+T*
+(Instrukcja uruchomienia) Tj
+T*
+() Tj
+T*
+(1. Skopiuj folder Assets z tej paczki do glownego folderu projektu Unity.) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 9 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1682 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(2. Wroc do Unity i poczekaj az skrypty sie skompiluja.) Tj
+T*
+(3. Wybierz z menu Unity: Tools -> Parking Project -> Build Demo Scenes.) Tj
+T*
+(4. Otworz scene Assets/Scenes/MainMenu.unity.) Tj
+T*
+(5. Uruchom Play i wybierz jedna z trzech map.) Tj
+T*
+() Tj
+T*
+(Build) Tj
+T*
+() Tj
+T*
+(Po wygenerowaniu scen wejdz w File -> Build Profiles albo File -> Build Settings.) Tj
+T*
+(Sceny zostana dodane automatycznie przez generator:) Tj
+T*
+() Tj
+T*
+(1. MainMenu) Tj
+T*
+(2. Map_01_Perpendicular) Tj
+T*
+(3. Map_02_Parallel) Tj
+T*
+(4. Map_03_Dynamic) Tj
+T*
+() Tj
+T*
+(Zbuduj wersje Windows .exe.) Tj
+T*
+() Tj
+T*
+(Znane problemy) Tj
+T*
+() Tj
+T*
+(- To jest wersja minimum zaliczeniowa, a nie algorytm konkursowy.) Tj
+T*
+(- Manewr parkowania korzysta z punktow ParkingScenario, wiec przy duzej zmianie wymiarow) Tj
+T*
+(sceny trzeba dostroic te punkty.) Tj
+T*
+(- Fizyka jest uproszczona i nie korzysta z pelnego modelu WheelCollider.) Tj
+T*
+(- Auto moze przejechac przez przeszkode, jesli czujnik awaryjny zostanie zle ustawiony albo) Tj
+T*
+(obiekt nie ma collidera.) Tj
+T*
+(- Mapy sa przygotowane tak, aby dobrze demonstrowac sensory, FSM i reakcje na przeszkode.) Tj
+T*
+() Tj
+T*
+(Co pokazac na filmie) Tj
+T*
+() Tj
+T*
+(- Menu z trzema mapami.) Tj
+T*
+(- Na mapie 1: ominiecie za waskiej luki i zaparkowanie w drugiej wolnej luce.) Tj
+T*
+(- Na mapie 2: odrzucenie za krotkiej luki i parkowanie rownolegle.) Tj
+T*
+(- Na mapie 3: miejsca po lewej, czerwone auto jedzie z naprzeciwka, nasze auto czeka, potem) Tj
+T*
+(podjezdza do lewej krawedzi i cofa w miejsce.) Tj
+T*
+(- Przez chwile pokazac Scene View, aby bylo widac zielone/czerwone promienie Debug.DrawRay.) Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000253 00000 n 
+0000002723 00000 n 
+0000002849 00000 n 
+0000005704 00000 n 
+0000005830 00000 n 
+0000007564 00000 n 
+trailer
+<< /Size 10 /Root 1 0 R >>
+startxref
+7634
+%%EOF

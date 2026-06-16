@@ -1,0 +1,413 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 5 0 R 7 0 R 9 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1868 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(04_Opis_do_obrony) Tj
+T*
+() Tj
+T*
+(Opis do obrony projektu) Tj
+T*
+() Tj
+T*
+(Ten dokument jest krotka sciaga do rozmowy z prowadzacym.) Tj
+T*
+() Tj
+T*
+(1. Jednozdaniowy opis projektu) Tj
+T*
+() Tj
+T*
+(Projekt przedstawia deterministyczna symulacje automatycznego parkowania w Unity, w ktorej) Tj
+T*
+(auto wykrywa miejsce parkingowe sensorami Raycast, przechodzi przez maszyne stanow FSM i) Tj
+T*
+(wykonuje zaprogramowany manewr parkowania.) Tj
+T*
+() Tj
+T*
+(2. Co jest najwazniejsze technicznie) Tj
+T*
+() Tj
+T*
+(Najwazniejsze elementy:) Tj
+T*
+() Tj
+T*
+(- Unity 3D jako srodowisko symulacyjne,) Tj
+T*
+(- C# i MonoBehaviour,) Tj
+T*
+(- sensory Physics.Raycast,) Tj
+T*
+(- walidacja miejsca przez Physics.CheckBox,) Tj
+T*
+(- FSM jako glowny algorytm decyzyjny,) Tj
+T*
+(- deterministyczny tor parkowania po punktach,) Tj
+T*
+(- przeszkoda dynamiczna wymuszajaca EmergencyStop,) Tj
+T*
+(- HUD debug pokazujacy stan algorytmu.) Tj
+T*
+() Tj
+T*
+(3. Dlaczego projekt nie uzywa ML) Tj
+T*
+() Tj
+T*
+(Mozna powiedziec:) Tj
+T*
+() Tj
+T*
+("Nie zastosowalem ML-Agents, poniewaz celem projektu bylo pokazanie algorytmu automatycznego) Tj
+T*
+(parkowania, a nie procesu uczenia modelu. Rozwiazanie deterministyczne jest latwiejsze do) Tj
+T*
+(wytlumaczenia, powtarzalne i stabilne podczas prezentacji. W projekcie widac sensory,) Tj
+T*
+(walidacje miejsca, automat stanow i reakcje na przeszkode.") Tj
+T*
+() Tj
+T*
+(4. Jak dziala auto) Tj
+T*
+() Tj
+T*
+(Auto ma dwa poziomy sterowania:) Tj
+T*
+() Tj
+T*
+(1. Podczas dojazdu jedzie kinematycznie.) Tj
+T*
+(2. Po znalezieniu miejsca wykonuje manewr po punktach trajektorii.) Tj
+T*
+() Tj
+T*
+(Powod:) Tj
+T*
+() Tj
+T*
+(- pelna fizyka auta wymagalaby strojenia zawieszenia, tarcia i masy,) Tj
+T*
+(- w projekcie zaliczeniowym wazniejszy jest algorytm i powtarzalny pokaz.) Tj
+T*
+() Tj
+T*
+(5. Jak dzialaja sensory) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 1380 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(Sensory sa promieniami:) Tj
+T*
+() Tj
+T*
+(- jeden z przodu,) Tj
+T*
+(- jeden z tylu,) Tj
+T*
+(- trzy z prawej,) Tj
+T*
+(- trzy z lewej.) Tj
+T*
+() Tj
+T*
+(Promienie zwracaja odleglosc do najblizszej przeszkody. Jezeli z boku jest wolna przestrzen) Tj
+T*
+(przez odpowiedni dystans, program uznaje, ze moze tam byc luka parkingowa.) Tj
+T*
+() Tj
+T*
+(Dodatkowo CheckBox sprawdza, czy w obszarze miejsca nie ma przeszkody.) Tj
+T*
+() Tj
+T*
+(6. Jak dziala FSM) Tj
+T*
+() Tj
+T*
+(FSM przechodzi przez stany:) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+([blok kodu / diagram w pliku Markdown]) Tj
+T*
+() Tj
+T*
+() Tj
+T*
+(Znaczenie:) Tj
+T*
+() Tj
+T*
+(- Scan - szukanie miejsca,) Tj
+T*
+(- ValidateSpot - potwierdzenie miejsca,) Tj
+T*
+(- Positioning - ustawienie auta,) Tj
+T*
+(- ReverseTurn - pierwszy skret,) Tj
+T*
+(- CounterTurn - kontra,) Tj
+T*
+(- Straighten - wyprostowanie,) Tj
+T*
+(- Parked - koniec.) Tj
+T*
+() Tj
+T*
+(Jest tez EmergencyStop, gdy pojawia sie przeszkoda.) Tj
+T*
+() Tj
+T*
+(7. Co pokazac na mapie 1) Tj
+T*
+() Tj
+T*
+(Powiedz:) Tj
+T*
+() Tj
+T*
+("Mapa 1 pokazuje parkowanie prostopadle. Wiekszosc miejsc jest zajeta, jest tez za waska) Tj
+T*
+(luka. Auto finalnie parkuje w poprawnym miejscu.") Tj
+T*
+() Tj
+T*
+(Pokaz:) Tj
+T*
+() Tj
+T*
+(- HUD,) Tj
+T*
+(- przejscia stanow,) Tj
+T*
+(- finalne zaparkowanie.) Tj
+T*
+() Tj
+T*
+(8. Co pokazac na mapie 2) Tj
+T*
+() Tj
+T*
+(Powiedz:) Tj
+T*
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 1731 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+() Tj
+T*
+("Mapa 2 pokazuje parkowanie rownolegle. Auto wykonuje cofanie, kontre i prostowanie.") Tj
+T*
+() Tj
+T*
+(Pokaz:) Tj
+T*
+() Tj
+T*
+(- cofanie,) Tj
+T*
+(- ustawienie rownolegle,) Tj
+T*
+(- stan Parked.) Tj
+T*
+() Tj
+T*
+(9. Co pokazac na mapie 3) Tj
+T*
+() Tj
+T*
+(Powiedz:) Tj
+T*
+() Tj
+T*
+("Mapa 3 pokazuje reakcje na ruchoma przeszkode. Czerwone auto jedzie z naprzeciwka, dlatego) Tj
+T*
+(niebieskie auto zatrzymuje sie w EmergencyStop. Po przejechaniu przeszkody kontynuuje i) Tj
+T*
+(parkuje po lewej stronie.") Tj
+T*
+() Tj
+T*
+(Pokaz:) Tj
+T*
+() Tj
+T*
+(- czerwone auto,) Tj
+T*
+(- zatrzymanie niebieskiego,) Tj
+T*
+(- kontynuacje manewru,) Tj
+T*
+(- finalne parkowanie po lewej.) Tj
+T*
+() Tj
+T*
+(10. Pytania i odpowiedzi) Tj
+T*
+() Tj
+T*
+(Czy to jest prawdziwa fizyka auta?) Tj
+T*
+() Tj
+T*
+(Nie w pelnym sensie. To uproszczony model kinematyczny i manewr po punktach. Pelna fizyka) Tj
+T*
+(auta w Unity wymagalaby dokladnego strojenia WheelCollider, masy, tarcia i zawieszenia.) Tj
+T*
+() Tj
+T*
+(Czy auto samo znajduje miejsce?) Tj
+T*
+() Tj
+T*
+(W projekcie sa sensory i struktura kandydata miejsca. W scenach demonstracyjnych miejsce) Tj
+T*
+(jest dodatkowo opisane w ParkingScenario, zeby pokaz byl powtarzalny.) Tj
+T*
+() Tj
+T*
+(Czy mozna dodac inne mapy?) Tj
+T*
+() Tj
+T*
+(Tak. Trzeba dodac nowa scene albo rozbudowac ParkingDemoBuilder, ustawic auta, linie i nowe) Tj
+T*
+(punkty ParkingScenarioStep.) Tj
+T*
+() Tj
+T*
+(Co jest najwiekszym uproszczeniem?) Tj
+T*
+() Tj
+T*
+(Najwieksze uproszczenie to finalny manewr parkowania po zaprogramowanych punktach, zamiast) Tj
+T*
+(dynamicznego wyznaczania trajektorii w czasie rzeczywistym.) Tj
+T*
+() Tj
+T*
+(Co jest najwazniejszym elementem algorytmu?) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 11 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 1328 >>
+stream
+BT
+/F1 10 Tf
+50 800 Td
+14 TL
+(Maszyna stanow FSM i sensory. FSM decyduje, co auto robi w danym momencie, a sensory) Tj
+T*
+(dostarczaja informacji o przeszkodach i miejscu.) Tj
+T*
+() Tj
+T*
+(11. Co powiedziec o wlasnym wkladzie) Tj
+T*
+() Tj
+T*
+(Mozna powiedziec:) Tj
+T*
+() Tj
+T*
+("Projekt zostal zrobiony jako indywidualna implementacja w Unity. Logika sterowania, FSM,) Tj
+T*
+(sensory, scenariusze, UI i dokumentacja zostaly przygotowane od zera. Nie korzystam z) Tj
+T*
+(ML-Agents ani gotowego modelu uczonego.") Tj
+T*
+() Tj
+T*
+(12. Krotki opis do sprawozdania) Tj
+T*
+() Tj
+T*
+(Projekt przedstawia symulacje automatycznego parkowania samochodu w Unity 3D. System opiera) Tj
+T*
+(sie na maszynie stanow FSM oraz czujnikach wirtualnych wykonanych za pomoca Physics.Raycast.) Tj
+T*
+(Czujniki mierza odleglosci od przeszkod z przodu, z tylu oraz po bokach pojazdu. Po wykryciu) Tj
+T*
+(poprawnego miejsca parkingowego auto przechodzi przez kolejne stany manewru: ustawienie,) Tj
+T*
+(skret, kontre, prostowanie i zatrzymanie. W scenie dynamicznej czerwony pojazd nadjezdzajacy) Tj
+T*
+(z naprzeciwka wymusza zatrzymanie awaryjne. Dla stabilnosci demonstracji finalny manewr) Tj
+T*
+(parkowania jest realizowany po wyznaczonych punktach trajektorii, co zapewnia powtarzalny) Tj
+T*
+(wynik i ulatwia prezentacje algorytmu.) Tj
+T*
+() Tj
+T*
+ET
+endstream
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 12
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000133 00000 n 
+0000000260 00000 n 
+0000002180 00000 n 
+0000002307 00000 n 
+0000003739 00000 n 
+0000003866 00000 n 
+0000005649 00000 n 
+0000005777 00000 n 
+0000007158 00000 n 
+trailer
+<< /Size 12 /Root 1 0 R >>
+startxref
+7229
+%%EOF
