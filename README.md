@@ -33,25 +33,15 @@ Oswiadczenie o zakresie prac: powyzszy podzial opisuje deklarowany wklad osob w 
   - `Map_03_Dynamic` - uklad jak mapa 1, ale miejsca sa po lewej stronie; auto z naprzeciwka wymusza zatrzymanie.
 - UI do przechodzenia miedzy mapami, w tym zapasowe przyciski `OnGUI`.
 - HUD debug pokazujacy stan FSM, predkosc i odczyty czujnikow.
-- Folder `Documentation` z pelnym opisem technicznym, instrukcja stworzenia projektu od zera, testami i sciaga do obrony.
+- README pelni role glownej dokumentacji technicznej i organizacyjnej projektu.
 
 ## Zgodnosc z wymaganiami oddania
 
-- Repozytorium zawiera kod zrodlowy, dokumentacje i plik `.gitignore` przygotowany pod Unity.
+- Repozytorium zawiera kod zrodlowy, README oraz plik `.gitignore` przygotowany pod Unity.
 - Historia Git zawiera commit poczatkowy oraz kolejne commity porzadkujace dokumentacje i metryczke projektu.
 - Projekt nie korzysta z ML-Agents ani z gotowego modelu `.onnx`; logika jest napisana jako deterministyczny FSM.
-- Dokumentacja zawiera opis decyzji projektowych, diagram FSM, instrukcje uruchomienia, test plan i znane ograniczenia.
+- README zawiera opis decyzji projektowych, diagram FSM, instrukcje uruchomienia, test plan i znane ograniczenia.
 - Film z demonstracja oraz build `.exe` nalezy przygotowac osobno po otwarciu projektu w Unity.
-
-## Dokumentacja
-
-W folderze `Documentation` sa osobne pliki:
-
-1. `01_Dokumentacja_techniczna.md` - dokladny opis architektury, klas, FSM, sensorow, map i generatora scen.
-2. `02_Jak_stworzyc_od_zera.md` - instrukcja jak zbudowac podobny projekt samodzielnie w Unity.
-3. `03_Testy_i_uruchomienie.md` - test plan, kryteria zaliczenia i typowe problemy.
-4. `04_Opis_do_obrony.md` - krotka sciaga do odpowiedzi przed prowadzacym.
-5. `05_Mapa_plikow_i_parametrow.md` - gdzie w kodzie zmieniac predkosci, sensory, tory parkowania i UI.
 
 ## Diagram FSM
 
@@ -101,6 +91,29 @@ Sprawdzono oficjalne `WheelCollider` Unity. To dobre narzedzie do pojazdow, ale 
 3. Wybierz z menu Unity: `Tools -> Parking Project -> Build Demo Scenes`.
 4. Otworz scene `Assets/Scenes/MainMenu.unity`.
 5. Uruchom Play i wybierz jedna z trzech map.
+
+## Mapa plikow
+
+| Plik | Rola |
+| --- | --- |
+| `Assets/Editor/ParkingDemoBuilder.cs` | Buduje materialy, prefab auta, UI i trzy sceny testowe. |
+| `Assets/Scripts/Parking/ParkingTypes.cs` | Definicje stanow FSM, typu parkowania, sensorow i kandydata miejsca. |
+| `Assets/Scripts/Parking/ParkingCarController.cs` | Uproszczona kinematyka auta oraz sledzenie punktow manewru. |
+| `Assets/Scripts/Parking/ParkingSensors.cs` | Czujniki `Raycast`, odczyty odleglosci i walidacja miejsca przez `CheckBox`. |
+| `Assets/Scripts/Parking/ParkingStateMachine.cs` | Glowny automat stanow: skanowanie, walidacja, manewr, stop awaryjny. |
+| `Assets/Scripts/Parking/ParkingScenario.cs` | Dane scenariusza: punkty wykrycia miejsca i trajektorie parkowania. |
+| `Assets/Scripts/Parking/MovingObstacle.cs` | Ruch czerwonego auta w scenie dynamicznej. |
+| `Assets/Scripts/Parking/VehicleVisualRig.cs` | Wizualny obrot kol i skret przednich kol. |
+| `Assets/Scripts/Parking/DebugHud.cs` | HUD debug w lewym gornym rogu. |
+| `Assets/Scripts/Parking/MapManager.cs` | Ladowanie map i restart. |
+
+## Test plan
+
+- Mapa 1: auto pomija za waska luke i parkuje w poprawnym miejscu prostopadlym.
+- Mapa 2: auto wykonuje parkowanie rownolegle tylem i konczy w stanie `Parked`.
+- Mapa 3: czerwone auto jedzie z naprzeciwka, niebieskie auto zatrzymuje sie, czeka, a potem parkuje po lewej stronie.
+- UI: przyciski `Map 1`, `Map 2`, `Map 3`, `Menu` i `Restart` zmieniaja sceny.
+- Debug: w Scene View widac promienie `Debug.DrawRay`, a HUD pokazuje stan FSM i sensory.
 
 ## Build
 
