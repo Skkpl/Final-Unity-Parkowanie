@@ -37,7 +37,7 @@ Oswiadczenie o zakresie prac: powyzszy podzial opisuje deklarowany wklad osob w 
 
 ## Zgodnosc z wymaganiami oddania
 
-- Repozytorium zawiera kod zrodlowy, README oraz plik `.gitignore` przygotowany pod Unity.
+- Repozytorium jest pelnym projektem Unity: zawiera `Assets`, `Packages`, `ProjectSettings`, README oraz plik `.gitignore` przygotowany pod Unity.
 - Historia Git zawiera commit poczatkowy oraz kolejne commity porzadkujace dokumentacje i metryczke projektu.
 - Projekt nie korzysta z ML-Agents ani z gotowego modelu `.onnx`; logika jest napisana jako deterministyczny FSM.
 - README zawiera opis decyzji projektowych, diagram FSM, instrukcje uruchomienia, test plan i znane ograniczenia.
@@ -86,11 +86,20 @@ Sprawdzono oficjalne `WheelCollider` Unity. To dobre narzedzie do pojazdow, ale 
 
 ## Instrukcja uruchomienia
 
-1. Skopiuj folder `Assets` z tej paczki do glownego folderu projektu Unity.
-2. Wroc do Unity i poczekaj az skrypty sie skompiluja.
-3. Wybierz z menu Unity: `Tools -> Parking Project -> Build Demo Scenes`.
-4. Otworz scene `Assets/Scenes/MainMenu.unity`.
-5. Uruchom Play i wybierz jedna z trzech map.
+1. Pobierz repozytorium z GitHuba albo sklonuj je przez Git.
+2. Otworz Unity Hub.
+3. Wybierz `Add -> Add project from disk`.
+4. Wskaz folder repozytorium `Final-Unity-Parkowanie`, czyli folder zawierajacy `Assets`, `Packages` i `ProjectSettings`.
+5. Otworz projekt w Unity `6000.4.10f1` albo innej wersji Unity 6 z URP.
+6. Poczekaj az Unity zaimportuje pakiety i skompiluje skrypty.
+7. Otworz scene `Assets/Scenes/MainMenu.unity`.
+8. Uruchom Play i wybierz jedna z trzech map.
+
+Jesli sceny nie pojawia sie po pierwszym imporcie, wybierz z menu Unity:
+
+`Tools -> Parking Project -> Build Demo Scenes`
+
+Ten generator tworzy `MainMenu`, trzy mapy testowe, prefabrykaty aut, materialy i wpisy w Build Settings.
 
 ## Mapa plikow
 
@@ -117,8 +126,10 @@ Sprawdzono oficjalne `WheelCollider` Unity. To dobre narzedzie do pojazdow, ale 
 
 ## Build
 
-Po wygenerowaniu scen wejdz w `File -> Build Profiles` albo `File -> Build Settings`.
-Sceny zostana dodane automatycznie przez generator:
+Sceny sa zapisane w repozytorium i powinny byc widoczne w `Assets/Scenes`. Gdyby trzeba bylo je odbudowac, uruchom `Tools -> Parking Project -> Build Demo Scenes`.
+
+Nastepnie wejdz w `File -> Build Profiles` albo `File -> Build Settings`.
+W Build Settings powinny byc dodane sceny:
 
 1. `MainMenu`
 2. `Map_01_Perpendicular`
